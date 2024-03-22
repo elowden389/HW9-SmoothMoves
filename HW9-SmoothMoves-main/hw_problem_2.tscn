@@ -17,8 +17,8 @@ floor_snap_length = 8.1
 script = ExtResource("1_bnc3r")
 jump_height = 2000.0
 movement_speed = 100.0
-horizontal_air_coefficient = 0.3
-speed_limit = 400.0
+horizontal_air_coefficient = 3.0
+speed_limit = 600.0
 friction = 0.2
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
@@ -104,12 +104,14 @@ polygon = PackedVector2Array(-587, -7, 1408, -15, 1403, 107, -578, 106)
 offset_left = 37.0
 offset_top = 20.0
 offset_right = 465.0
-offset_bottom = 324.0
+offset_bottom = 439.0
 theme_override_font_sizes/normal_font_size = 26
 text = "You need to change two values to EASILY beat this level (by getting to the green level piece). Red will restart the level!
 
 No moving level pieces. 
-No programming AIs to do it for you."
+No programming AIs to do it for you.
+
+I increased the air coefficient and max speed."
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
